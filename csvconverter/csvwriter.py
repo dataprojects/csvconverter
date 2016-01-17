@@ -42,17 +42,7 @@ class CsvWriter():
                     
         print('Csv file was written successfully')               
         return 1             
-        
-
-if __name__ == '__main__':
-    logfile = FileClass('log/user.log')
-    data_type = 'user'
-    csv_fieldnames = UserLogConverter("").fieldlist
-    csvfile = CsvFileClass(csv_fieldnames, 'data/user.csv')
-    
-    tst = CsvWriter(logfile, csvfile, data_type).writeCsv()
-    print(tst)
-    
+         
     
     
     

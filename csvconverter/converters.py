@@ -140,27 +140,5 @@ class UserLogConverter(Converter):
         
         return res              
         
-    
-if __name__=='__main__':
-    
-    # Query log test
-    line = '[2015-10-25T01:06:04.597988 #24714]  INFO -- : Query: timenote, log_id: 590ce8ea1f43'    
-    print(line)    
-    tst = QueryLogConverter(line).convert()
-    print(tst)
-    
        
-    # Filter log test
-    line = '[2015-10-25T12:56:08.600938 #11443]  INFO -- : Filters: {"track"=>["alpha", "beta", "start"], "parent_industry"=>["HR & Recruitment", "Sports & Fitness"]}, log_id: 03517361782c'
-    tst = FiltersLogConverter(line).convert()
-    print(tst)      
-    
-    
-    # User log test
-    line = '[2015-10-25T01:06:04.598323 #24714]  INFO -- : User: [526308, "Israel", ["HR & Recruitment", "Recreation & Wellness", "Big Data", "AI", "Press", "Entertainment", "Enterprise", "Philanthropy & Social Good", "UI", "UX", "AdTech", "Content & Media", "Business Intelligence", "Cloud Infrastructure", "Design", "PR", "Data Science", "Travel", "Advertising", "Sports & Fitness", "Lifestyle", "Marketing", "eCommerce", "Social Media", "Development"]], log_id: 590ce8ea1f43'
-    tst = UserLogConverter(line).convert()
-    for record in tst:
-        print(record)
-    
-    
     

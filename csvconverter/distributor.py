@@ -48,13 +48,7 @@ class FileDistributor():
         print('Data distribution is over')
                              
 
-if __name__=='__main__':
-    data_folder = 'log'
-    logfile_location = 'log/anonymised_search.log'
-    data_files = ['query.log', 'filters.log', 'user.log']
-    data_types = ['Query', 'Filters', 'User']
-    
-    FileDistributor(data_folder, logfile_location, data_files, data_types).distribute()
+
 
 
 

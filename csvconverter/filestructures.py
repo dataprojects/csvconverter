@@ -101,29 +101,3 @@ class CsvFileClass(FileClass):
             writer = csv.DictWriter(csvfile, fieldnames=self.field_names)
             writer.writeheader()             
             
-
-if __name__ == '__main__':
-    test1 = FileClass('media/test1.txt')
-    print(test1.file_name)
-    print(test1.folder)
-    print(test1.file_location)
-    print()
-    
-    test2 = FileClass('media', 'test2.txt')
-    print(test2.file_name)
-    print(test2.folder)
-    print(test2.file_location)   
-    print() 
-    
-    test3 = CsvFileClass(['val1', 'val2'], 'media/csvtest1.csv')
-    print(test3.file_name)
-    print(test3.folder)
-    print(test3.file_location)
-    print(test3.field_names)
-    print()
-    
-    test4 = CsvFileClass(['val11', 'val22'], 'media', 'csvtest2.csv')
-    print(test4.file_name)
-    print(test4.folder)
-    print(test4.file_location)
-    print(test4.field_names)

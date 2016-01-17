@@ -1,5 +1,5 @@
 #! /usr/bin/env python3.4
-from csvconverter.filestructures import FileClass
+from csvconverter.filestructures import FileClass 
 
 
 class FolderCleaner(): 
@@ -23,9 +23,4 @@ class FolderCleaner():
         print()
         print("Data directory is ready.")
  
-if __name__=='__main__':
-    data_folder = 'log'
-    logfile_location = 'log/anonymised_search.log'
-    data_files = ['query.log', 'filters.log', 'user.log']   
-    myCleaner = FolderCleaner(data_folder, data_files)  
-    myCleaner.cleanDataFolder()      
+     
